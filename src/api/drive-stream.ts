@@ -45,7 +45,7 @@ export class DriveStream {
   private constructor(forumTopic: ForumTopic, source: string, after?: Date) {
     this.source = source;
     this.forumTopic = forumTopic;
-    this.observable = interval(10_000).pipe(
+    this.observable = interval(60_000).pipe(
       tap(() => logger.info(`Attempting to access "${source}"...`)),
       mergeMap(() => from(DriveFile.getFiles(source, after))),
       tap<DriveFile[]>(lst => logger.info(`Successfully fetched ${lst.length} files`)),
