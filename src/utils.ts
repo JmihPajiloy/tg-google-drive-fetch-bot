@@ -1,4 +1,4 @@
-import type { BotContext } from "./main";
+import type { BotContext } from "./bot";
 
 export function getAuthor(ctx: BotContext) {
   const author = ctx.from;

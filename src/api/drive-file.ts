@@ -2,7 +2,7 @@ import type { AxiosResponse } from "axios";
 import axios from "axios";
 import { InputFile } from "grammy";
 import type { FolderConfig } from "./drive-stream";
-import { API_KEY } from "../main";
+import { API_KEY } from "../bot";
 import { getAuthor } from "../utils";
 
 export type FileConfig = {
