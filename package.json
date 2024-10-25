@@ -1,0 +1,37 @@
+{
+  "name": "untitled1",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "scripts": {
+    "run": "ts-node src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.9.0",
+    "@types/eslint__js": "^8.42.3",
+    "@types/node": "^22.7.9",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "prisma": "^5.21.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0"
+  },
+  "dependencies": {
+    "@grammyjs/chat-members": "^1.1.0",
+    "@grammyjs/conversations": "^1.2.0",
+    "@grammyjs/parse-mode": "^1.10.0",
+    "@prisma/client": "^5.21.1",
+    "@types/mongoose": "^5.11.96",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "grammy": "^1.30.0",
+    "grammy-middlewares": "^1.0.11",
+    "rxjs": "^7.8.1",
+    "winston": "^3.15.0"
+  }
+}
