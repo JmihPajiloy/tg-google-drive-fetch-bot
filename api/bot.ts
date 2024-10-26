@@ -1,15 +1,15 @@
 import { type Conversation, type ConversationFlavor, conversations, createConversation } from "@grammyjs/conversations";
 import { type ChatMembersFlavor } from "@grammyjs/chat-members";
 
-import { Bot, type Context, GrammyError, HttpError, session } from "grammy";
+import { Bot, type Context, GrammyError, HttpError, session, webhookCallback } from "grammy";
 import { onlyAdmin } from "grammy-middlewares";
 import type { ParseModeFlavor } from "@grammyjs/parse-mode";
 import { hydrateReply } from "@grammyjs/parse-mode";
 import { logger } from "./logger";
-import type { DriveFile } from "./api/drive-file";
+import type { DriveFile } from "./drive/drive-file";
 import axios from "axios";
-import type { DriveObserver, ForumTopic } from "./api/drive-stream";
-import { DRIVE_FOLDER_LINK_REGEX, DriveStream } from "./api/drive-stream";
+import type { DriveObserver, ForumTopic } from "./drive/drive-stream";
+import { DRIVE_FOLDER_LINK_REGEX, DriveStream } from "./drive/drive-stream";
 import { getAll, upsert } from "../prisma/prisma";
 import { escapeMarkdown, getAuthor } from "./utils";
 import { Subject, tap } from "rxjs";
@@ -135,3 +135,5 @@ void bot.start({
     logger.info(`${info.username} is running!`);
   },
 });
+
+export default webhookCallback(bot, "std/http");

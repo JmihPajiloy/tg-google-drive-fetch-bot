@@ -1,9 +1,9 @@
 {
   "name": "untitled1",
   "version": "1.0.0",
-  "main": "src/bot.ts",
+  "main": "api/bot.ts",
   "scripts": {
-    "run": "ts-node src/bot.ts",
+    "run": "ts-node api/bot.ts",
     "postinstall": "prisma generate"
   },
   "keywords": [],

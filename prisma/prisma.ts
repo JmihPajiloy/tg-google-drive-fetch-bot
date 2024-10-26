@@ -1,5 +1,5 @@
 import { PrismaClient } from "@prisma/client";
-import type { ForumTopic } from "../src/api/drive-stream";
+import type { ForumTopic } from "../api/drive/drive-stream";
 
 export const prisma = new PrismaClient();
 
